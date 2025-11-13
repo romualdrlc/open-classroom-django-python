@@ -1,0 +1,18 @@
+{% extends 'listings/base.html' %} {% block content %}
+
+<h2>{{ listing.title }}</h2>
+
+<ul>
+  <li>Description : {{ listing.description }}</li>
+  <li>Année de formation : {{ listing.year_formed }}</li>
+  <li>Vendu ? : {{ listing.is_sold|yesno }}</li>
+  <li>Type : {{ listing.type }}</li>
+</ul>
+
+<p>{{ listing.band }}</p>
+
+<a href="{% url 'listing-update' listing.id %}">Modifier ce listing</a>
+
+<a href="{% url 'listing-list' %}">Retour à la liste</a>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>Merchex</title>
+    <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+  </head>
+  <body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <div class="col">
+          <a class="navbar-brand" href="{% url 'band-list' %}">Groupes</a>
+          <a class="navbar-brand" href="{% url 'listing-list' %}">Listing</a>
+        </div>
+        <div class="col d-flex">
+          <a class="navbar-brand" href="{% url 'contact' %}">Contact</a>
+        </div>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,37 @@
+# --- Environnement virtuel ---
+env/
+venv/
+.venv/
+
+# --- Fichiers Python compilés ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Base de données locale ---
+*.sqlite3
+
+# --- Fichiers de logs et temporaires ---
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.bak
+
+# --- Dossier de migrations compilées (on garde les scripts, pas les caches) ---
+**/migrations/__pycache__/
+
+# --- Fichiers de configuration spécifiques à l'OS ---
+.DS_Store
+Thumbs.db
+
+# --- Fichiers de configuration IDE ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Cache et fichiers temporaires Django ---
+staticfiles/
+media/
